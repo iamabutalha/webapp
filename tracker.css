@@ -1,0 +1,577 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    /* Removed display: flex; justify-content: center; align-items: center; height: 100vh; */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    /* Removed display: flex; justify-content: center; align-items: center; height: 100vh; */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+
+h1{
+    text-align: center;
+    color: #333333;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="decimal"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.transactions-container {
+    margin-top: 20px;
+}
+
+.transaction {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.transaction.income {
+    border-color: #4CAF50;
+}
+
+
+
+.transaction.expense {
+    border-color: #f44336;
+}
+
+.transaction:hover {
+    background-color: #e0e0e0;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total h2 {
+    color: #333333;
+    font-size: 20px;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+
+.transactions-container {
+    margin-top: 20px;
+}
+
+.transaction {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.transaction.income {
+    border-color: #4CAF50;
+}
+
+/* .transaction.expense {
+    border-color: #f44336;
+} */
+
+.transaction:hover {
+    background-color: #e0e0e0;
+}
+
+.transaction span {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.transaction span:first-child {
+    text-align: left;
+    flex-grow: 2;
+}
+
+.transaction span:last-child {
+    text-align: right;
+    flex-basis: 100px; /* Adjust this value as needed to align amounts */
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+/* GitHub Button Styles */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.github-btn {
+    display: inline-block;
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #444d56;
+    transform: translateY(-3px);
+}
+
+.github-btn:active {
+    background-color: #24292e;
+    transform: translateY(0);
+}
+
+@media (max-width: 400px) {
+    .github-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Development Mode Banner Styles */
+.dev-mode-banner {
+    background-color: #FFD700; /* Golden background */
+    color: #333333;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* GitHub Button Styles */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.github-btn {
+    display: inline-block;
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #444d56;
+    transform: translateY(-3px);
+}
+
+.github-btn:active {
+    background-color: #24292e;
+    transform: translateY(0);
+}
+
+@media (max-width: 400px) {
+    .github-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.development-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #DAA520; /* Updated to a more attractive gold color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 60px auto 0; /* Adjusted margin to account for the fixed banner */
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="decimal"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.transactions-container {
+    margin-top: 20px;
+}
+
+.transaction {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.transaction.income {
+    border-color: #4CAF50;
+}
+
+.transaction.expense {
+    border-color: #f44336;
+}
+
+.transaction:hover {
+    background-color: #e0e0e0;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total h2 {
+    color: #333333;
+    font-size: 20px;
+}
+
+.github-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-github {
+    background-color: #24292e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.btn-github:hover {
+    background-color: #444d56;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+
+.total-negative-balance {
+    color: red;
+}
+.total-positive-balance {
+    color: green;
+}
+
+
+
+/* Basic styles for the menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Hover color */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: display 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Styles */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+}
+
+/* Burger toggle animation */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

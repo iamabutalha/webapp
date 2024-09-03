@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="tracker.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="development-mode">Development Mode #FreePalsetine</div>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">MyApps</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Apps&#x25BC;</a>
+            <div class="dropdown-content">
+              <a href="index.html">Expense Tracker</a>
+              <a href="#">Weather App</a>
+              <a href="#">Currency Converter</a>
+              <a href="#">Stock Tracker</a>
+            </div>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <p class="error-message"></p>
+      <form id="expense-form">
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            placeholder="Enter description"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input
+            type="decimal"
+            id="amount"
+            placeholder="Enter amount"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="type">Type</label>
+          <select id="type" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Add Transaction</button>
+      </form>
+
+      <div id="transactions-container" class="transactions-container">
+        <!-- Sample Transaction -->
+        <!-- <div class="transaction income">
+          <span>Food</span>
+          <span>+$120.00</span>
+          <button class="delete-btn">Delete</button>
+        </div> -->
+      </div>
+
+      <div class="total">
+        <h2>Total Balance: <span id="total-balance">$120.00</span></h2>
+      </div>
+
+      <div class="footer">
+        <a
+          href="https://github.com/iamabutalha"
+          target="_blank"
+          class="github-btn"
+        >
+          Find me on GitHub
+        </a>
+      </div>
+    </div>
+    <script src="tracker.js"></script>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navLinks = document.querySelector(".nav-links");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("nav-active");
+        burger.classList.toggle("toggle");
+      });
+    </script>
+  </body>
+</html>
